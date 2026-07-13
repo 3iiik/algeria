@@ -101,6 +101,16 @@ function applyLang() {
   const tryAgainText = document.getElementById('try-again-text');
   if (tryAgainText) tryAgainText.textContent = t('try_again');
 
+  // Intro grid labels
+  const labelFoodie = document.getElementById('label-foodie');
+  if (labelFoodie) labelFoodie.textContent = t('label_foodie');
+  const labelChill = document.getElementById('label-chill');
+  if (labelChill) labelChill.textContent = t('label_chill');
+  const labelUrban = document.getElementById('label-urban');
+  if (labelUrban) labelUrban.textContent = t('label_urban');
+  const labelTradition = document.getElementById('label-tradition');
+  if (labelTradition) labelTradition.textContent = t('label_tradition');
+
   // Language button active state
   document.querySelectorAll('.lang-btn').forEach(el => {
     el.classList.toggle('lang-btn-active', el.dataset.lang === currentLang);

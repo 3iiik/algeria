@@ -21,7 +21,11 @@ const UI = {
   start_title: {"en":"Which Algerian City<br class=\"hidden md:block\" /> Are You?","fr":"Quelle Ville Algérienne<br class=\"hidden md:block\" /> Es-Tu ?","ar":"أي مدينة جزائرية<br class=\"hidden md:block\" /> أنت؟"},
   share_card_quiz: {"en":"Take the quiz on","fr":"Fais le quiz sur","ar":"اختبر نفسك على"},
   share_card_title: {"en":"Which Algerian City Are You?","fr":"Quelle Ville Algérienne Es-Tu ?","ar":"أي مدينة جزائرية أنت؟"},
-  share_card_im: {"en":"I'M 100%","fr":"JE SUIS 100%","ar":"أنا %100"}
+  share_card_im: {"en":"I'M 100%","fr":"JE SUIS 100%","ar":"أنا %100"},
+  label_foodie: {"en":"Foodie?","fr":"Foodie ?","ar":"ذواق؟"},
+  label_chill: {"en":"Chill?","fr":"Chill ?","ar":"رايق؟"},
+  label_urban: {"en":"Urban?","fr":"Urbain ?","ar":"مدني؟"},
+  label_tradition: {"en":"Tradition?","fr":"Tradition ?","ar":"تقليدي؟"}
 };
 
 const QUESTIONS = [
