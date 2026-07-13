@@ -116,10 +116,12 @@
 
       <div class="absolute inset-0 z-0 pointer-events-none">
         <div class="zellige-pattern absolute inset-0"></div>
-        <div class="absolute top-[10%] left-[5%] w-32 h-32 bg-primary-fixed-dim rounded-lg border-4 border-on-background neo-shadow float-element sticker-rotate-1 opacity-40"></div>
-        <div class="absolute bottom-[15%] right-[10%] w-40 h-40 bg-secondary-fixed-dim rounded-full border-4 border-on-background neo-shadow float-element sticker-rotate-2 opacity-30" style="animation-delay: 1s;"></div>
-        <div class="absolute top-[40%] right-[5%] w-24 h-24 bg-tertiary-fixed rounded-xl border-4 border-on-background neo-shadow float-element opacity-50" style="animation-delay: 2s;"></div>
       </div>
+
+      <!-- Decorative shapes — outside z-0 wrapper so they can stack above card on mobile -->
+      <div class="absolute top-[10%] md:left-[5%] left-0 w-12 h-12 md:w-32 md:h-32 bg-primary-fixed-dim rounded-lg border-4 border-on-background neo-shadow float-element sticker-rotate-1 opacity-25 md:opacity-40 z-20 md:z-0 pointer-events-none"></div>
+      <div class="absolute bottom-[15%] md:right-[10%] right-0 w-14 h-14 md:w-40 md:h-40 bg-secondary-fixed-dim rounded-full border-4 border-on-background neo-shadow float-element sticker-rotate-2 opacity-20 md:opacity-30 z-20 md:z-0 pointer-events-none" style="animation-delay: 1s;"></div>
+      <div class="absolute top-[60%] md:top-[40%] md:right-[5%] right-0 w-10 h-10 md:w-24 md:h-24 bg-tertiary-fixed rounded-xl border-4 border-on-background neo-shadow float-element opacity-25 md:opacity-50 z-20 md:z-0 pointer-events-none" style="animation-delay: 2s;"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-lg w-full">
 
@@ -172,13 +174,14 @@
         </div>
       </div>
 
-      <div class="absolute top-24 right-2 md:right-40 float-element opacity-70 md:opacity-100 z-0 pointer-events-none">
-        <div class="bg-on-primary-container text-on-primary border-4 border-on-background p-sm rounded-lg neo-shadow font-label-bold -rotate-12 text-xs md:text-sm">
+      <!-- Decorative stickers — overlay the card on all screen sizes -->
+      <div class="absolute top-8 right-1 md:right-10 float-element z-30 pointer-events-none">
+        <div class="bg-on-primary-container text-on-primary border-4 border-on-background px-2 py-0.5 rounded-lg neo-shadow font-label-bold -rotate-12 text-[10px] md:text-sm whitespace-nowrap">
           100% Legit! 🔥
         </div>
       </div>
-      <div class="absolute bottom-48 left-2 md:left-20 float-element opacity-70 md:opacity-100 z-0 pointer-events-none" style="animation-delay: 1.5s;">
-        <div class="bg-tertiary-fixed text-on-tertiary-fixed border-4 border-on-background p-sm rounded-lg neo-shadow font-label-bold rotate-12 text-xs md:text-sm">
+      <div class="absolute bottom-8 left-1 md:left-10 float-element z-30 pointer-events-none" style="animation-delay: 1.5s;">
+        <div class="bg-tertiary-fixed text-on-tertiary-fixed border-4 border-on-background px-2 py-0.5 rounded-lg neo-shadow font-label-bold rotate-12 text-[10px] md:text-sm whitespace-nowrap">
           Sahbi Mode Activated
         </div>
       </div>
