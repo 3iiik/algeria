@@ -162,3 +162,10 @@
 .quiz-bottom-pad {
   height: 80px;
 }
+
+/* --- Language switcher active state --- */
+.lang-btn-active {
+  background: #006233 !important;
+  color: #ffffff !important;
+  border-color: #004824 !important;
+}

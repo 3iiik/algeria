@@ -107,6 +107,13 @@
 </head>
 <body class="bg-background text-on-background min-h-screen font-body-lg overflow-x-hidden">
 
+  <!-- Language switcher -->
+  <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50 flex gap-1 md:gap-2">
+    <button data-lang="en" class="lang-btn px-2 py-1 md:px-3 md:py-1.5 text-xs md:text-sm font-label-bold border-2 border-on-background rounded-lg neo-shadow-sm bg-surface hover:bg-primary-container transition-colors">EN</button>
+    <button data-lang="fr" class="lang-btn px-2 py-1 md:px-3 md:py-1.5 text-xs md:text-sm font-label-bold border-2 border-on-background rounded-lg neo-shadow-sm bg-surface hover:bg-primary-container transition-colors">FR</button>
+    <button data-lang="ar" class="lang-btn px-2 py-1 md:px-3 md:py-1.5 text-xs md:text-sm font-label-bold border-2 border-on-background rounded-lg neo-shadow-sm bg-surface hover:bg-primary-container transition-colors">AR</button>
+  </div>
+
   <main id="app" style="position: relative;">
 
     <!-- ================================================================ -->
@@ -130,17 +137,17 @@
             <span class="bg-tertiary text-on-tertiary font-label-bold px-md py-xs rounded-full border-2 border-on-background uppercase tracking-widest text-sm">Viral Quiz</span>
           </div>
 
-          <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-sm leading-none">
+          <h1 id="start-title" class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-sm leading-none">
             Which Algerian City<br class="hidden md:block" /> Are You?
           </h1>
 
-          <p class="font-body-lg text-on-surface-variant max-w-md mx-auto mb-md">
+          <p id="start-tagline" class="font-body-lg text-on-surface-variant max-w-md mx-auto mb-md">
             From the chaos of Algiers to the chill of Oran, find out where you actually belong. 🇩🇿
           </p>
 
           <button id="start-btn" class="group relative inline-flex items-center justify-center px-xl py-md font-display-lg text-headline-md bg-secondary text-on-secondary border-4 border-on-background neo-shadow-sm transition-all rounded-lg overflow-hidden neo-press">
             <span class="relative z-10 flex items-center gap-base">
-              Start Quiz
+              <span id="start-btn-text">Start Quiz</span>
               <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
             </span>
             <div class="absolute inset-0 bg-on-background opacity-0 group-hover:opacity-10 transition-opacity"></div>
@@ -169,7 +176,7 @@
         <div>
           <p class="font-body-sm text-outline flex items-center gap-xs">
             <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">groups</span>
-            Join 12.5k people who found their home city today
+            <span id="join-count">Join 12.5k people who found their home city today</span>
           </p>
         </div>
       </div>
@@ -204,8 +211,8 @@
             </div>
           </div>
           <div class="flex justify-between mt-4 font-label-bold text-on-surface-variant text-xs px-2">
-            <span>Start</span>
-            <span>The Goal</span>
+            <span id="progress-start">Start</span>
+            <span id="progress-goal">The Goal</span>
           </div>
         </div>
 
@@ -230,13 +237,15 @@
       <div class="relative z-10 flex flex-col items-center text-center gap-lg w-full max-w-3xl">
 
         <!-- Badge -->
-        <div class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-md py-xs rounded-full border-2 border-on-background neo-shadow-sm mb-base text-sm uppercase">
+        <div id="result-badge" class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-md py-xs rounded-full border-2 border-on-background neo-shadow-sm mb-base text-sm uppercase">
           QUIZ RESULT
         </div>
 
         <!-- Headline -->
-        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tighter mb-sm drop-shadow-sm">
-          You belong in <span id="result-city" class="text-secondary underline decoration-4 decoration-primary">Oran</span>!
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tighter mb-sm drop-shadow-sm flex flex-wrap items-baseline justify-center gap-1">
+          <span id="result-prefix">You belong in</span>
+          <span id="result-city" class="text-secondary underline decoration-4 decoration-primary">Oran</span>
+          <span id="result-suffix">!</span>
         </h2>
         <p id="result-tagline" class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface-variant -mt-2">
           Coastal energy, French-Spanish flair 🌊
@@ -279,11 +288,11 @@
       <div class="flex flex-col sm:flex-row gap-gutter w-full max-w-md">
         <button id="share-btn" class="flex-1 bg-secondary text-on-secondary font-display-lg-mobile py-md rounded-lg border-4 border-on-background neo-shadow-sm hover:-translate-y-1 neo-press transition-all flex items-center justify-center gap-sm text-lg">
           <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">share</span>
-          Share Result
+          <span id="share-btn-text">Share Result</span>
         </button>
         <button id="try-again-btn" class="flex-1 bg-surface text-on-surface font-display-lg-mobile py-md rounded-lg border-4 border-on-background neo-shadow-sm hover:-translate-y-1 neo-press transition-all flex items-center justify-center gap-sm text-lg">
           <span class="material-symbols-outlined">refresh</span>
-          Try Again
+          <span id="try-again-text">Try Again</span>
         </button>
       </div>
 

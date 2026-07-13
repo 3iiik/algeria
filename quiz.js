@@ -44,6 +44,66 @@ function resetQuiz() {
   showScreen(introScreen);
 }
 
+// --- Language helpers ---
+function t(key) {
+  return UI[key]?.[currentLang] || UI[key]?.en || key;
+}
+
+function applyLang() {
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+  // Intro screen
+  const startTitle = document.getElementById('start-title');
+  if (startTitle) startTitle.innerHTML = t('start_title');
+  const startTagline = document.getElementById('start-tagline');
+  if (startTagline) startTagline.textContent = t('start_tagline');
+  const startBtnText = document.getElementById('start-btn-text');
+  if (startBtnText) startBtnText.textContent = t('quiz_start');
+  const joinCount = document.getElementById('join-count');
+  if (joinCount) joinCount.textContent = t('join_count');
+
+  // Quiz screen
+  const progressStart = document.getElementById('progress-start');
+  if (progressStart) progressStart.textContent = t('progress_start');
+  const progressGoal = document.getElementById('progress-goal');
+  if (progressGoal) progressGoal.textContent = t('progress_goal');
+
+  // Result screen
+  const resultBadge = document.getElementById('result-badge');
+  if (resultBadge) resultBadge.textContent = t('result_badge');
+  const resultPrefix = document.getElementById('result-prefix');
+  if (resultPrefix) resultPrefix.textContent = t('result_prefix');
+  const resultSuffix = document.getElementById('result-suffix');
+  if (resultSuffix) resultSuffix.textContent = t('result_suffix');
+  const shareBtnText = document.getElementById('share-btn-text');
+  if (shareBtnText) shareBtnText.textContent = t('share_btn');
+  const tryAgainText = document.getElementById('try-again-text');
+  if (tryAgainText) tryAgainText.textContent = t('try_again');
+
+  // Language button active state
+  document.querySelectorAll('.lang-btn').forEach(el => {
+    el.classList.toggle('lang-btn-active', el.dataset.lang === currentLang);
+  });
+
+  // Re-render current question if on quiz screen
+  if (quizScreen.classList.contains('active') && state.currentQuestion < state.totalQuestions) {
+    renderQuestion(state.currentQuestion);
+  }
+}
+
+// Bind language switcher
+document.querySelectorAll('[data-lang]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentLang = btn.dataset.lang;
+    localStorage.setItem('algeria-lang', currentLang);
+    applyLang();
+  });
+});
+
+// Apply language on load
+applyLang();
+
 // --- Progress bar ---
 function updateProgress(index) {
   const pct = Math.round(((index + 1) / state.totalQuestions) * 100);
@@ -83,16 +143,18 @@ function renderQuestion(index) {
     questionEl.classList.add("opacity-100", "translate-y-0");
   });
 
+  const qText = typeof q.question === 'object' ? (q.question[currentLang] || q.question.en) : q.question;
+
   questionEl.innerHTML = `
     <section class="mb-lg">
       <div class="bg-surface border-4 border-on-background p-md rounded-lg neo-shadow-lg -rotate-1 mb-md">
         <h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-background text-center leading-tight">
-          ${q.question}
+          ${qText}
         </h2>
       </div>
       <div class="relative h-0">
         <div class="absolute -top-12 -right-4 bg-secondary text-on-secondary font-bold px-4 py-2 rounded-full border-2 border-on-background rotate-12 neo-shadow-sm animate-pulse text-sm">
-          CHOOSE! 🔥
+          ${t('quiz_choose')}
         </div>
       </div>
     </section>
@@ -100,8 +162,9 @@ function renderQuestion(index) {
       ${q.options
         .map(
           (opt, i) => {
-            const emoji = extractEmoji(opt.label);
-            const cleanLabel = opt.label.replace(emoji, "").trim();
+            const optLabel = typeof opt.label === 'object' ? (opt.label[currentLang] || opt.label.en) : opt.label;
+            const emoji = extractEmoji(optLabel);
+            const cleanLabel = optLabel.replace(emoji, "").trim();
             const colorClass = optionColors[i % optionColors.length];
             return `
               <button class="option-btn group w-full text-left bg-surface border-4 border-on-background p-md rounded-lg neo-shadow hover:neo-shadow-lg hover:-translate-y-1 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all flex items-center gap-md" data-index="${i}">
@@ -239,12 +302,18 @@ function calculateResult() {
 
 // --- Show result ---
 function showResult(city) {
+  const tagline = typeof city.tagline === 'object' ? (city.tagline[currentLang] || city.tagline.en) : city.tagline;
+  const description = typeof city.description === 'object' ? (city.description[currentLang] || city.description.en) : city.description;
+  const vibeTag = typeof city.vibe_tag === 'object' ? (city.vibe_tag[currentLang] || city.vibe_tag.en) : (city.vibe_tag || t('vibe_prefix'));
+
   $("#result-city").textContent = city.name;
-  $("#result-tagline").textContent = `${city.tagline} ${city.emoji}`;
-  $("#result-description").textContent = city.description;
-  $("#result-vibe-tag").textContent = city.vibe_tag || "Perfect Vibe";
-  $("#result-vibe-quote").textContent = `"${city.vibe_tag || "Perfect match!"}"`;
-  $("#result-sticker-1").textContent = `100% ${city.demonym || city.name.toUpperCase()}!`;
+  $("#result-tagline").textContent = `${tagline} ${city.emoji}`;
+  $("#result-description").textContent = description;
+  $("#result-vibe-tag").textContent = vibeTag;
+  $("#result-vibe-quote").textContent = `"${vibeTag}"`;
+  $("#result-sticker-1").textContent = t('sticker_1');
+  const suffixEl = document.getElementById('result-suffix');
+  if (suffixEl) suffixEl.textContent = t('result_suffix');
 
   // Show city photo if available, fall back to emoji
   const img = $("#result-image");

@@ -16,10 +16,14 @@ async function shareResult() {
   const city = CITIES[cityKey];
   const emoji = city?.emoji || "📍";
   const demonym = city ? city.demonym : cityName.toUpperCase();
+  const cardLang = currentLang || 'en';
+  const taglineObj = city?.tagline;
+  const shareTagline = typeof taglineObj === 'object' ? (taglineObj[cardLang] || taglineObj.en) : tagline;
 
   // Build neo-brutalist share card matching Stitch design
   const card = document.createElement("div");
   card.className = "share-card";
+  card.dir = cardLang === 'ar' ? 'rtl' : 'ltr';
   card.innerHTML = `
     <div class="zellige-pattern"></div>
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -30,18 +34,18 @@ async function shareResult() {
       <!-- Top badge -->
       <div class="animate-float sticker-rotate-left">
         <div class="bg-tertiary-container text-on-tertiary-container border-2 border-on-background px-md py-xs rounded-full font-label-bold neo-shadow-sm inline-block text-xs">
-          QUIZ RESULT: 100% VIBE
+          ${t('result_badge')}: 100% VIBE
         </div>
       </div>
 
       <!-- Headline -->
       <div class="space-y-sm">
         <h2 class="font-display-lg text-3xl md:text-display-lg text-primary uppercase tracking-tighter leading-none">
-          I'M 100%<br>
+          ${t('share_card_im')}<br>
           <span class="text-secondary bg-surface px-4 border-4 border-on-background inline-block sticker-rotate-right mt-2 neo-shadow-sm text-3xl">${demonym}</span>
         </h2>
         <p class="font-body-lg text-on-surface bg-white/80 backdrop-blur-sm px-sm py-xs border-2 border-on-background rounded-md inline-block mt-4 text-base">
-          ${tagline}
+          ${shareTagline}
         </p>
       </div>
 
@@ -68,8 +72,8 @@ async function shareResult() {
             🇩🇿
           </div>
           <div>
-            <p class="font-label-bold text-xs text-surface-variant">Take the quiz on</p>
-            <p class="font-display-lg text-base leading-none italic">Which Algerian City Are You?</p>
+            <p class="font-label-bold text-xs text-surface-variant">${t('share_card_quiz')}</p>
+            <p class="font-display-lg text-base leading-none italic">${t('share_card_title')}</p>
           </div>
           <span class="material-symbols-outlined ml-auto text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">chevron_right</span>
         </div>
