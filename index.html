@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Which Algerian City Should You Live In?</title>
+  <meta name="description" content="Discover your perfect Algerian city match based on your lifestyle and preferences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Space+Grotesk:wght@700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "primary": "#004824",
+              "inverse-primary": "#86d89d",
+              "on-tertiary-fixed-variant": "#703800",
+              "surface-variant": "#e0e4dd",
+              "secondary-fixed": "#ffdad9",
+              "on-tertiary-container": "#ffba88",
+              "surface-container-highest": "#e0e4dd",
+              "on-background": "#181d19",
+              "on-secondary-container": "#fffbff",
+              "surface": "#f7fbf3",
+              "tertiary-fixed": "#ffdcc4",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#e2213d",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#89dba0",
+              "primary-fixed-dim": "#86d89d",
+              "surface-container-low": "#f1f5ee",
+              "outline": "#6f7a70",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#410008",
+              "primary-fixed": "#a1f5b7",
+              "surface-bright": "#f7fbf3",
+              "on-primary-fixed-variant": "#00522a",
+              "secondary": "#ba002a",
+              "surface-tint": "#146c3c",
+              "on-tertiary-fixed": "#2f1400",
+              "secondary-fixed-dim": "#ffb3b2",
+              "on-secondary-fixed-variant": "#92001f",
+              "surface-container-high": "#e5e9e2",
+              "tertiary": "#613000",
+              "on-surface": "#181d19",
+              "inverse-on-surface": "#eef2eb",
+              "on-error-container": "#93000a",
+              "outline-variant": "#bfc9be",
+              "on-primary": "#ffffff",
+              "on-primary-fixed": "#00210d",
+              "primary-container": "#006233",
+              "background": "#f7fbf3",
+              "tertiary-container": "#844300",
+              "surface-container": "#ebefe8",
+              "on-surface-variant": "#3f4940",
+              "error": "#ba1a1a",
+              "inverse-surface": "#2d322d",
+              "tertiary-fixed-dim": "#ffb781",
+              "surface-dim": "#d7dbd4",
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+            spacing: {
+              base: "8px",
+              "margin-desktop": "120px",
+              xs: "4px",
+              sm: "12px",
+              lg: "40px",
+              gutter: "16px",
+              "margin-mobile": "20px",
+              md: "24px",
+              xl: "64px",
+            },
+            fontFamily: {
+              "display-lg": ["Bricolage Grotesque"],
+              "label-bold": ["Space Grotesk"],
+              "headline-md": ["Bricolage Grotesque"],
+              "body-lg": ["Rubik"],
+              "body-sm": ["Rubik"],
+              "display-lg-mobile": ["Bricolage Grotesque"],
+            },
+            fontSize: {
+              "display-lg": ["48px", { lineHeight: "52px", letterSpacing: "-0.02em", fontWeight: "800" }],
+              "label-bold": ["14px", { lineHeight: "16px", fontWeight: "700" }],
+              "headline-md": ["28px", { lineHeight: "34px", fontWeight: "700" }],
+              "body-lg": ["18px", { lineHeight: "26px", fontWeight: "500" }],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "display-lg-mobile": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            },
+          },
+        },
+      };
+    } catch (_e) {}
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-lg overflow-x-hidden">
+
+  <main id="app" style="position: relative;">
+
+    <!-- ================================================================ -->
+    <!-- INTRO SCREEN -->
+    <!-- ================================================================ -->
+    <section id="intro-screen" class="screen active flex flex-col items-center justify-start pt-16 pb-lg px-margin-mobile text-center min-h-screen">
+
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="zellige-pattern absolute inset-0"></div>
+        <div class="absolute top-[10%] left-[5%] w-32 h-32 bg-primary-fixed-dim rounded-lg border-4 border-on-background neo-shadow float-element sticker-rotate-1 opacity-40"></div>
+        <div class="absolute bottom-[15%] right-[10%] w-40 h-40 bg-secondary-fixed-dim rounded-full border-4 border-on-background neo-shadow float-element sticker-rotate-2 opacity-30" style="animation-delay: 1s;"></div>
+        <div class="absolute top-[40%] right-[5%] w-24 h-24 bg-tertiary-fixed rounded-xl border-4 border-on-background neo-shadow float-element opacity-50" style="animation-delay: 2s;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-lg w-full">
+
+        <div class="bg-surface-container-lowest border-4 border-on-background p-md md:p-xl rounded-lg neo-shadow sticker-rotate-1 transform transition-transform hover:rotate-0 w-full max-w-lg">
+          <div class="mb-sm">
+            <span class="bg-tertiary text-on-tertiary font-label-bold px-md py-xs rounded-full border-2 border-on-background uppercase tracking-widest text-sm">Viral Quiz</span>
+          </div>
+
+          <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-sm leading-none">
+            Which Algerian City<br class="hidden md:block" /> Are You?
+          </h1>
+
+          <p class="font-body-lg text-on-surface-variant max-w-md mx-auto mb-md">
+            From the chaos of Algiers to the chill of Oran, find out where you actually belong. 🇩🇿
+          </p>
+
+          <button id="start-btn" class="group relative inline-flex items-center justify-center px-xl py-md font-display-lg text-headline-md bg-secondary text-on-secondary border-4 border-on-background neo-shadow-sm transition-all rounded-lg overflow-hidden neo-press">
+            <span class="relative z-10 flex items-center gap-base">
+              Start Quiz
+              <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+            </span>
+            <div class="absolute inset-0 bg-on-background opacity-0 group-hover:opacity-10 transition-opacity"></div>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter w-full max-w-lg">
+          <div class="bg-primary-container border-2 border-on-background p-base rounded-lg neo-shadow-sm sticker-rotate-1 flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-on-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+            <span class="font-label-bold text-on-primary-container mt-xs text-xs">Foodie?</span>
+          </div>
+          <div class="bg-surface-container-high border-2 border-on-background p-base rounded-lg neo-shadow-sm sticker-rotate-2 flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">beach_access</span>
+            <span class="font-label-bold text-on-surface-variant mt-xs text-xs">Chill?</span>
+          </div>
+          <div class="bg-secondary-container border-2 border-on-background p-base rounded-lg neo-shadow-sm sticker-rotate-1 flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-on-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">location_city</span>
+            <span class="font-label-bold text-on-secondary-container mt-xs text-xs">Urban?</span>
+          </div>
+          <div class="bg-tertiary-container border-2 border-on-background p-base rounded-lg neo-shadow-sm sticker-rotate-2 flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-on-tertiary-container text-4xl" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+            <span class="font-label-bold text-on-tertiary-container mt-xs text-xs">Tradition?</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-body-sm text-outline flex items-center gap-xs">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">groups</span>
+            Join 12.5k people who found their home city today
+          </p>
+        </div>
+      </div>
+
+      <div class="absolute top-20 right-10 md:right-40 float-element hidden sm:block">
+        <div class="bg-on-primary-container text-on-primary border-4 border-on-background p-sm rounded-lg neo-shadow font-label-bold -rotate-12 text-sm">
+          100% Legit! 🔥
+        </div>
+      </div>
+      <div class="absolute bottom-40 left-10 md:left-20 float-element hidden sm:block" style="animation-delay: 1.5s;">
+        <div class="bg-tertiary-fixed text-on-tertiary-fixed border-4 border-on-background p-sm rounded-lg neo-shadow font-label-bold rotate-12 text-sm">
+          Sahbi Mode Activated
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- QUIZ SCREEN -->
+    <!-- ================================================================ -->
+    <section id="quiz-screen" class="screen flex flex-col items-center pt-16 pb-8 px-margin-mobile min-h-screen">
+      <div class="w-full max-w-2xl mx-auto">
+
+        <!-- Progress bar -->
+        <div class="relative w-full mb-12 px-4">
+          <div class="h-6 w-full bg-surface-container border-4 border-on-background rounded-full overflow-visible relative">
+            <div id="progress-fill" class="h-full bg-primary-container rounded-l-full relative transition-all duration-500" style="width: 0%">
+              <div id="progress-badge" class="absolute -right-6 -top-12 flex-col items-center hidden" style="display: none">
+                <div class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-lg border-2 border-on-background mb-1 font-label-bold neo-shadow-sm text-xs whitespace-nowrap" id="progress-pct">0%</div>
+                <span class="material-symbols-outlined text-4xl text-primary animate-camel" style="font-variation-settings: 'FILL' 1;">bakery_dining</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between mt-4 font-label-bold text-on-surface-variant text-xs px-2">
+            <span>Start</span>
+            <span>The Goal</span>
+          </div>
+        </div>
+
+        <!-- Question rendered here by quiz.js -->
+        <div id="quiz-content"></div>
+
+        <!-- Decorative icons -->
+        <div id="quiz-decorations" class="mt-xl flex justify-center gap-lg opacity-50">
+          <span class="material-symbols-outlined text-6xl text-primary rotate-12" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+          <span class="material-symbols-outlined text-6xl text-secondary -rotate-12" style="font-variation-settings: 'FILL' 1;">map</span>
+          <span class="material-symbols-outlined text-6xl text-tertiary-container rotate-6" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+        </div>
+
+        <div class="quiz-bottom-pad"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- RESULT SCREEN -->
+    <!-- ================================================================ -->
+    <section id="result-screen" class="screen flex flex-col items-center pt-16 pb-8 px-margin-mobile min-h-screen">
+      <div class="relative z-10 flex flex-col items-center text-center gap-lg w-full max-w-3xl">
+
+        <!-- Badge -->
+        <div class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-bold text-label-bold px-md py-xs rounded-full border-2 border-on-background neo-shadow-sm mb-base text-sm uppercase">
+          QUIZ RESULT
+        </div>
+
+        <!-- Headline -->
+        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tighter mb-sm drop-shadow-sm">
+          You belong in <span id="result-city" class="text-secondary underline decoration-4 decoration-primary">Oran</span>!
+        </h2>
+        <p id="result-tagline" class="font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface-variant -mt-2">
+          Coastal energy, French-Spanish flair 🌊
+        </p>
+
+        <!-- Main result card wrapper (positions stickers outside card) -->
+        <div class="relative w-full mb-md">
+          <div class="w-full asymmetric-1 bg-surface border-4 border-on-background p-md md:p-lg neo-shadow-lg relative group overflow-hidden">
+            <div class="absolute inset-0 zellige-pattern opacity-10"></div>
+
+            <div class="relative z-10 flex flex-col md:flex-row gap-lg items-center">
+              <!-- City photo -->
+              <div id="result-image-wrapper" class="w-full md:w-1/2 aspect-square rounded-lg border-4 border-on-background overflow-hidden neo-shadow-sm -rotate-1 flex items-center justify-center bg-surface-container">
+                <img id="result-image" class="w-full h-full object-cover hidden" src="" alt="City photo" />
+                <span id="result-emoji" class="text-7xl hidden">📍</span>
+              </div>
+              <!-- Blurb -->
+              <div class="w-full md:w-1/2 text-left space-y-md">
+                <div id="result-description" class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                  Oran pulses with a Mediterranean rhythm — think seaside promenades, raï music echoing through colonial streets, and a nightlife that keeps going until dawn.
+                </div>
+                <div class="bg-surface-container p-sm border-2 border-on-background rounded-md italic font-body-sm text-on-surface-variant">
+                  <span id="result-vibe-quote">"You have the energy of someone who can find the best Calentica spot at 3 AM."</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stickers (outside card, freely overhang) -->
+          <div id="result-sticker-1" class="absolute top-0 right-0 bg-secondary-container text-on-secondary px-2 py-1 rounded-lg border-2 border-on-background z-20 font-label-bold text-xs" style="transform: translate(30%, -50%) rotate(12deg)">
+            100% MATCH
+          </div>
+          <div class="absolute bg-primary-container text-on-primary-container px-2 py-1 rounded-lg border-2 border-on-background z-20 flex items-center gap-xs text-xs" style="bottom: -10px; left: -9px; transform: rotate(-12deg)">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">music_note</span>
+            <span id="result-vibe-tag">Perfect Vibe</span>
+          </div>
+        </div>
+
+      <!-- Action buttons -->
+      <div class="flex flex-col sm:flex-row gap-gutter w-full max-w-md">
+        <button id="share-btn" class="flex-1 bg-secondary text-on-secondary font-display-lg-mobile py-md rounded-lg border-4 border-on-background neo-shadow-sm hover:-translate-y-1 neo-press transition-all flex items-center justify-center gap-sm text-lg">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">share</span>
+          Share Result
+        </button>
+        <button id="try-again-btn" class="flex-1 bg-surface text-on-surface font-display-lg-mobile py-md rounded-lg border-4 border-on-background neo-shadow-sm hover:-translate-y-1 neo-press transition-all flex items-center justify-center gap-sm text-lg">
+          <span class="material-symbols-outlined">refresh</span>
+          Try Again
+        </button>
+      </div>
+
+      <div class="quiz-bottom-pad"></div>
+    </div>
+    </section>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="quiz.js"></script>
+  <script src="share.js"></script>
+</body>
+</html>

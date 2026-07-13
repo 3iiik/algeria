@@ -1,0 +1,15 @@
+# Environment variables (API keys, secrets)
+*.env
+Algeria.env
+
+# OS junk
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Editor temp files
+*.swp
+*.swo
+*~
+*.bak
+*.tmp

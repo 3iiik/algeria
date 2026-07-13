@@ -1,0 +1,20 @@
+[
+  {
+    "code": "04",
+    "name_en": "Oum El Bouaghi",
+    "capital_city": "Oum El Bouaghi",
+    "reason": "No P18 image on Wikidata (or P17 didn't match Algeria)"
+  },
+  {
+    "code": "61",
+    "name_en": "Ksar Chellala",
+    "capital_city": "Ksar Chellala",
+    "reason": "No P18 image on Wikidata (or P17 didn't match Algeria)"
+  },
+  {
+    "code": "67",
+    "name_en": "Bir El Ater",
+    "capital_city": "Bir El Ater",
+    "reason": "No P18 image on Wikidata (or P17 didn't match Algeria)"
+  }
+]
