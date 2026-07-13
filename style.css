@@ -163,6 +163,16 @@
   height: 80px;
 }
 
+/* --- Arabic font override --- */
+html[lang="ar"] body,
+html[lang="ar"] .font-display-lg,
+html[lang="ar"] .font-headline-md,
+html[lang="ar"] .font-body-lg,
+html[lang="ar"] .font-body-sm,
+html[lang="ar"] .font-label-bold {
+  font-family: 'Cairo', sans-serif;
+}
+
 /* --- Language switcher active state --- */
 .lang-btn-active {
   background: #006233 !important;
