@@ -19,7 +19,6 @@ const UI = {
   vibe_prefix: {"en":"Perfect Vibe","fr":"Vibe Parfait","ar":"ال vibe مثالي"},
   start_tagline: {"en":"From the chaos of Algiers to the chill of Oran, find out where you actually belong. 🇩🇿","fr":"Du chaos d'Alger au chill d'Oran, découvre où est ta vraie place. 🇩🇿","ar":"من فوضى الجزائر العاصمة إلى هدوء وهران، اكتشف أين مكانك الحقيقي. 🇩🇿"},
   start_title: {"en":"Which Algerian City<br class=\"hidden md:block\" /> Are You?","fr":"Quelle Ville Algérienne<br class=\"hidden md:block\" /> Es-Tu ?","ar":"أي مدينة جزائرية<br class=\"hidden md:block\" /> أنت؟"},
-  join_count: {"en":"Join 12.5k people who found their home city today","fr":"Rejoins 12.5k personnes qui ont trouvé leur ville aujourd'hui","ar":"انضم إلى 12.5 ألف شخص وجدوا مدينتهم اليوم"},
   share_card_quiz: {"en":"Take the quiz on","fr":"Fais le quiz sur","ar":"اختبر نفسك على"},
   share_card_title: {"en":"Which Algerian City Are You?","fr":"Quelle Ville Algérienne Es-Tu ?","ar":"أي مدينة جزائرية أنت؟"},
   share_card_im: {"en":"I'M 100%","fr":"JE SUIS 100%","ar":"أنا %100"}

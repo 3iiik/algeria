@@ -83,9 +83,6 @@ function applyLang() {
   if (startTagline) startTagline.textContent = t('start_tagline');
   const startBtnText = document.getElementById('start-btn-text');
   if (startBtnText) startBtnText.textContent = t('quiz_start');
-  const joinCount = document.getElementById('join-count');
-  if (joinCount) joinCount.textContent = t('join_count');
-
   // Quiz screen
   const progressStart = document.getElementById('progress-start');
   if (progressStart) progressStart.textContent = t('progress_start');
