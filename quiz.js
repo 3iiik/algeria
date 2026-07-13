@@ -21,6 +21,29 @@ const progressPct = $("#progress-pct");
 const startBtn = $("#start-btn");
 const tryAgainBtn = $("#try-again-btn");
 
+// --- Language overlay ---
+const langOverlay = $("#lang-overlay");
+
+function initLang() {
+  if (!currentLang) {
+    langOverlay.classList.remove("hidden");
+    [introScreen, quizScreen, resultScreen].forEach((s) => s.classList.remove("active"));
+    return;
+  }
+  langOverlay.classList.add("hidden");
+  applyLang();
+}
+
+document.querySelectorAll(".overlay-lang-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    currentLang = btn.dataset.lang;
+    localStorage.setItem("algeria-lang", currentLang);
+    langOverlay.classList.add("hidden");
+    showScreen(introScreen);
+    applyLang();
+  });
+});
+
 // --- Screen switching ---
 function showScreen(screen) {
   [introScreen, quizScreen, resultScreen].forEach((s) => s.classList.remove("active"));
@@ -101,8 +124,8 @@ document.querySelectorAll('[data-lang]').forEach(btn => {
   });
 });
 
-// Apply language on load
-applyLang();
+// Init language on load (show overlay if none selected)
+initLang();
 
 // --- Progress bar ---
 function updateProgress(index) {

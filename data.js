@@ -3,7 +3,7 @@
 // Auto-generated from Gemini content + Wikidata P18 images
 // ============================================================
 
-let currentLang = localStorage.getItem('algeria-lang') || 'en';
+let currentLang = localStorage.getItem('algeria-lang') || null;
 
 const UI = {
   quiz_start: {"en":"Start Quiz","fr":"Commencer le Quiz","ar":"ابدأ الاختبار"},
