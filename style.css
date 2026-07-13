@@ -3,16 +3,6 @@
    Everything here extends Tailwind's utility classes.
    ============================================================ */
 
-/* --- Prevent mobile viewport zoom-out (iOS Safari quirk) --- */
-html {
-  overflow-x: hidden;
-  width: 100%;
-}
-body {
-  width: 100%;
-  max-width: 100vw;
-}
-
 /* --- Neo-brutalist drop shadows --- */
 .neo-shadow {
   box-shadow: 6px 6px 0px #181d19;
