@@ -15,6 +15,7 @@ const UI = {
   result_badge: {"en":"QUIZ RESULT","fr":"RÉSULTAT DU QUIZ","ar":"نتيجة الاختبار"},
   share_btn: {"en":"Share Result","fr":"Partager","ar":"مشاركة النتيجة"},
   try_again: {"en":"Try Again","fr":"Recommencer","ar":"حاول مجدداً"},
+  tiktok_follow: {"en":"Follow on TikTok","fr":"Suivre sur TikTok","ar":"تابعني على تيكتوك"},
   sticker_1: {"en":"100% MATCH","fr":"100% MATCH","ar":"تطابق تام %100"},
   vibe_prefix: {"en":"Perfect Vibe","fr":"Vibe Parfait","ar":"ال vibe مثالي"},
   start_tagline: {"en":"From the chaos of Algiers to the chill of Oran, find out where you actually belong. 🇩🇿","fr":"Du chaos d'Alger au chill d'Oran, découvre où est ta vraie place. 🇩🇿","ar":"من فوضى الجزائر العاصمة إلى هدوء وهران، اكتشف أين مكانك الحقيقي. 🇩🇿"},

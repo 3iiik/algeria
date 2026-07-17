@@ -100,6 +100,8 @@ function applyLang() {
   if (shareBtnText) shareBtnText.textContent = t('share_btn');
   const tryAgainText = document.getElementById('try-again-text');
   if (tryAgainText) tryAgainText.textContent = t('try_again');
+  const tiktokText = document.getElementById('tiktok-text');
+  if (tiktokText) tiktokText.textContent = t('tiktok_follow');
 
   // Intro grid labels
   const labelFoodie = document.getElementById('label-foodie');
